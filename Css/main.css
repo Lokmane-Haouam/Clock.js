@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.clock {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.clock div:first-child span {
+  font-size: 35px;
+  font-weight: 900;
+}
+.clock div:first-child span:not(:first-child) {
+  margin-left: 20px;
+  position: relative;
+}
+.clock div:first-child span:not(:first-child)::before {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+.clock div:last-child span {
+  font-size: 25px;
+  font-weight: 600;
+}
+.clock div:last-child span:not(:first-child) {
+  margin-left: 30px;
+}
+#w {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 30px;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
